@@ -101,7 +101,7 @@ export function useBlueprint() {
   }, [risks, profile]);
 
   const addStressTestResult = useCallback(
-    (result: Blueprint['stressTestResults'][0]) => {
+    (result: import('../types').StressTestResult) => {
       setBlueprint((prev) => {
         if (!prev) return prev;
         return {

@@ -247,7 +247,7 @@ const BlueprintCanvas: React.FC<BlueprintCanvasProps> = ({ blueprint }) => {
               </div>
               <div className="detail-row">
                 <span>Severity</span>
-                <span style={{ color: severityColors[(selectedDetails as any).severity] }}>
+                <span style={{ color: severityColors[(selectedDetails as any).severity as keyof typeof severityColors] }}>
                   {(selectedDetails as any).severity}
                 </span>
               </div>
@@ -268,7 +268,7 @@ const BlueprintCanvas: React.FC<BlueprintCanvasProps> = ({ blueprint }) => {
               <div className="detail-title">{(selectedDetails as any).title}</div>
               <div className="detail-row">
                 <span>Priority</span>
-                <span style={{ color: priorityColors[(selectedDetails as any).priority] }}>
+                <span style={{ color: priorityColors[(selectedDetails as any).priority as keyof typeof priorityColors] }}>
                   {(selectedDetails as any).priority.replace('_', ' ')}
                 </span>
               </div>
